@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- Link to css stylesheet -->
+    <title>Course Explorer by Hammad</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<h1>Course Explorer</h1>
+
+<h2>Load Courses (JSON)</h2>
+<input type="file" id="fileInput" accept=".json">
+<div id="errorMessage" class="error"></div>
+
+<div id="controls" style="display:none;">
+    <h2>Sort and Filter</h2>
+<!-- dropdown -->
+    Department:
+    <select id="departmentFilter">
+        <option value="All">All</option>
+    </select>
+
+    Level:
+    <select id="levelFilter">
+        <option value="All">All</option>
+    </select>
+
+    Credits:
+    <select id="creditsFilter">
+        <option value="All">All</option>
+    </select>
+
+    Instructor:
+    <select id="instructorFilter">
+        <option value="All">All</option>
+    </select>
+
+    Sort By:
+    <select id="sortBy">
+        <option value="none">None</option>
+        <option value="id-asc">ID (A–Z)</option>
+        <option value="id-desc">ID (Z–A)</option>
+        <option value="title-asc">Title (A–Z)</option>
+        <option value="title-desc">Title (Z–A)</option>
+        <option value="semester-asc">Semester (Earliest first)</option>
+        <option value="semester-desc">Semester (Latest first)</option>
+    </select>
+</div>
+
+<div id="main" style="display:none;">
+    <div id="courseList"></div>
+    <div id="courseDetails">
+        <p>Select a course for details</p>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
